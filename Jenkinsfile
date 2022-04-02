@@ -1,14 +1,12 @@
 pipeline {
     agent {
-        docker {
-            image 'python:3.10.1-alpine'
-        }
+        any
     }
 
     stages {
-        stage('Get the version of Python') {
+        stage('Build') {
             steps {
-                sh 'python --version'
+                sh 'echo "This is a build!"'
             }
         }
     }
